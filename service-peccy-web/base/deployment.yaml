@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-peccy-web
+  labels:
+    app: service-peccy-web
+spec:
+  replicas: 12
+  selector:
+    matchLabels:
+      app: service-peccy-web
+  template:
+    metadata:
+      labels:
+        app: service-peccy-web
+    spec:
+      containers:
+      - name: service-peccy-web
+        image: ssup2/eks-cicd-dr_service-peccy-web:test
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: http
+          initialDelaySeconds: 30 
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: http
+          initialDelaySeconds: 30
+          periodSeconds: 5
+        env:
+        - name: MYSQL_DATABASE
+          value: stage_store
+        - name: MYSQL_PRIMARY_IP
+          value: mysql-primary.infra
+        - name: MYSQL_PRIMARY_PORT
+          value: "3306"
+        - name: MYSQL_PRIMARY_USER
+          value: root
+        - name: MYSQL_PRIMARY_PASSWORD
+          value: root
+        volumeMounts:
+        - name: tz-seoul
+          mountPath: /etc/localtime
+      volumes:
+        - name: tz-seoul
+          hostPath:
+            path: /usr/share/zoneinfo/Asia/Seoul
