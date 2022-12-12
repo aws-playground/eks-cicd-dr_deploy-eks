@@ -18,7 +18,6 @@ spec:
         eks.amazonaws.com/nodegroup: app-server
       containers:
       - name: service-peccy-app
-        image: ssup2/eks-cicd-dr_service-peccy-app:latest
         imagePullPolicy: Always
         ports:
         - name: http

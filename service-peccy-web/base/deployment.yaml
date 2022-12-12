@@ -18,7 +18,6 @@ spec:
         eks.amazonaws.com/nodegroup: web-server
       containers:
       - name: service-peccy-web
-        image: ssup2/eks-cicd-dr_service-peccy-web:test
         imagePullPolicy: Always
         ports:
         - name: http
