@@ -1,0 +1,10 @@
+namespace: default
+
+commonLabels:
+  deploy-env: tyoko
+
+resources:
+- ../../base
+
+patchesStrategicMerge:
+- deployment.yaml

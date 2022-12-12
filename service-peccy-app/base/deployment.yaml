@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: service-peccy-web
+  name: service-peccy-app
   labels:
-    app: service-peccy-web
+    app: service-peccy-app
 spec:
   replicas: 12
   selector:
     matchLabels:
-      app: service-peccy-web
+      app: service-peccy-app
   template:
     metadata:
       labels:
-        app: service-peccy-web
+        app: service-peccy-app
     spec:
       nodeSelector:
-        eks.amazonaws.com/nodegroup: web-server
+        eks.amazonaws.com/nodegroup: app-server
       containers:
-      - name: service-peccy-web
-        image: ssup2/eks-cicd-dr_service-peccy-web:test
+      - name: service-peccy-app
+        image: ssup2/eks-cicd-dr_service-peccy-app:latest
         imagePullPolicy: Always
         ports:
         - name: http

@@ -1,0 +1,10 @@
+namespace: default
+
+commonLabels:
+  deploy-env: seoul
+
+resources:
+- ../../base
+
+patchesStrategicMerge:
+- deployment.yaml

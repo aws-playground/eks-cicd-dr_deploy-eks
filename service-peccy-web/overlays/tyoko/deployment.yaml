@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-peccy-web
+  labels:
+    app: service-peccy-web
+spec:
+  template:
+    spec:
+      containers:
+      - name: service-peccy-web
+        env:
+        - name: AWS_REGION
+          value: tyoko

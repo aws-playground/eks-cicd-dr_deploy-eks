@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-peccy-app
+  labels:
+    app: service-peccy-app
+spec:
+  template:
+    spec:
+      containers:
+      - name: service-peccy-app
+        env:
+        - name: AWS_REGION
+          value: seoul
