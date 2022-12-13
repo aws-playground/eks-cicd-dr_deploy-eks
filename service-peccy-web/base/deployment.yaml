@@ -36,8 +36,8 @@ spec:
           initialDelaySeconds: 30
           periodSeconds: 5
         env:
-        - name: API_URL
-          value: peccy-api.aws-playground.dev
+        - name: API_ENDPOINT
+          value: https://peccy-api.aws-playground.dev
         volumeMounts:
         - name: tz-seoul
           mountPath: /etc/localtime
