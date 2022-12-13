@@ -37,7 +37,7 @@ spec:
           periodSeconds: 5
         env:
         - name: API_URL
-          value: service-peccy-app
+          value: peccy-api.aws-playground.dev
         volumeMounts:
         - name: tz-seoul
           mountPath: /etc/localtime
