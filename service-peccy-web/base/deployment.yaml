@@ -36,16 +36,8 @@ spec:
           initialDelaySeconds: 30
           periodSeconds: 5
         env:
-        - name: MYSQL_DATABASE
-          value: stage_store
-        - name: MYSQL_PRIMARY_IP
-          value: mysql-primary.infra
-        - name: MYSQL_PRIMARY_PORT
-          value: "3306"
-        - name: MYSQL_PRIMARY_USER
-          value: root
-        - name: MYSQL_PRIMARY_PASSWORD
-          value: root
+        - name: API_URL
+          value: service-peccy-app
         volumeMounts:
         - name: tz-seoul
           mountPath: /etc/localtime
