@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: service-peccy-app
   annotations:
+    external-dns.alpha.kubernetes.io/alias: true
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/healthcheck-path: /healthz
 spec:

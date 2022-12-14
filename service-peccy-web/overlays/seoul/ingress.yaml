@@ -3,5 +3,6 @@ kind: Ingress
 metadata:
   name: service-peccy-web
   annotations:
+    external-dns.alpha.kubernetes.io/set-identifier: service-peccy-web-primary
+    external-dns.alpha.kubernetes.io/aws-failover: PRIMARY
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:727618787612:certificate/08554d50-4579-4ea9-bc0d-42b7591df7a2
-
