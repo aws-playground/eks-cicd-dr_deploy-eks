@@ -9,7 +9,10 @@ spec:
     spec:
       containers:
       - name: service-peccy-app
-        image: 727618787612.dkr.ecr.ap-northeast-2.amazonaws.com/eks-cicd-dr_service-peccy-app:commit-63ea8062b21d0fc8401d896a2fe29482195469e1
+        image: 727618787612.dkr.ecr.ap-northeast-2.amazonaws.com/eks-cicd-dr_service-peccy-app:commit-3c0228e7a167638da56c24f6d83131b108a27544
         env:
         - name: AWS_REGION
           value: seoul
+        - name: MYSQL_URL
+          value: eks-cicd-dr-primary-seoul.cluster-cynrd5hzuufh.ap-northeast-2.rds.amazonaws.com
+

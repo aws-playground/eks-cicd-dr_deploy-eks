@@ -36,16 +36,14 @@ spec:
           initialDelaySeconds: 30
           periodSeconds: 5
         env:
-        - name: MYSQL_DATABASE
-          value: stage_store
-        - name: MYSQL_PRIMARY_IP
-          value: mysql-primary.infra
-        - name: MYSQL_PRIMARY_PORT
+        - name: MYSQL_DB_NAME
+          value: peccy
+        - name: MYSQL_USER
+          value: admin
+        - name: MYSQL_PASSWORD
+          value: adminadmin
+        - name: MYSQL_PORT
           value: "3306"
-        - name: MYSQL_PRIMARY_USER
-          value: root
-        - name: MYSQL_PRIMARY_PASSWORD
-          value: root
         volumeMounts:
         - name: tz-seoul
           mountPath: /etc/localtime
