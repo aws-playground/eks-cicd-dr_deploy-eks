@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
       - name: service-peccy-web
-        image: 727618787612.dkr.ecr.ap-northeast-2.amazonaws.com/eks-cicd-dr_service-peccy-web:commit-34998cc2a3ec8257bc116bc777d10a50a5bade3f
+        image: 727618787612.dkr.ecr.ap-northeast-2.amazonaws.com/eks-cicd-dr_service-peccy-web:commit-e2765435e6f6133d8a08e5c6e4f09a1575e6f54e
         env:
         - name: AWS_REGION
-          value: seoul
+          value: Seoul
