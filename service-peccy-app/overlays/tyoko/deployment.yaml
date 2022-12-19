@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
       - name: service-peccy-app
-        image: 727618787612.dkr.ecr.ap-northeast-1.amazonaws.com/eks-cicd-dr_service-peccy-app:commit-22be71564e72c1885bf3a2e15d7cc19bda0d795c
+        image: 727618787612.dkr.ecr.ap-northeast-1.amazonaws.com/eks-cicd-dr_service-peccy-app:commit-899c1b5e45bdfcd15b33843b2b3763424c98d35d
         env:
         - name: AWS_REGION
           value: Tyoko
