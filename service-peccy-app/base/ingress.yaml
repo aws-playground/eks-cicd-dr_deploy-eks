@@ -4,7 +4,6 @@ metadata:
   name: service-peccy-app
   annotations:
     external-dns.alpha.kubernetes.io/alias: true
-    external-dns.alpha.kubernetes.io/ttl: 5
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/healthcheck-path: /healthz
     alb.ingress.kubernetes.io/healthcheck-interval-seconds: 5
