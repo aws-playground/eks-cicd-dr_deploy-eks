@@ -33,7 +33,7 @@ spec:
           httpGet:
             path: /healthz
             port: http
-          initialDelaySeconds: 30
+          initialDelaySeconds: 10
           periodSeconds: 5
         env:
         - name: MYSQL_DB_NAME
